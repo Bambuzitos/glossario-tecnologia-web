@@ -1,0 +1,138 @@
+/* DARK MODE */
+.dark-mode,
+.dark-mode:root {
+    --body-bg: #212121;
+    --body-color: #E0E0E0;
+    --link-color: #BDBDBD;
+    --link-color-hover: #4FC3F7;
+    --button-bg: transparent;
+    --button-color: var(--link-color);
+    --menu-bg: #333;
+
+    --coluna-bg: #333;
+    --sub-linha-bg: #555;
+}
+
+/* LIGHT MODE */
+:root {
+    --body-bg: #cbcbcb;
+    --body-color: #1C1C1C;
+    --link-color: #000000;
+    --link-color-hover: #ec5848;
+    --button-bg: transparent;
+    --button-color: var(--link-color);
+    --menu-bg: #f5f5f5;
+
+    --coluna-bg: #f5f5f5;
+    --sub-linha-bg: #f5f5f5;
+}
+
+/* MUDAR O TEMA */
+.dark-mode-toggle {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color:var(--body-bg);
+    color:var(--body-color);
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* GERAL */
+body {
+    background-color:var(--body-bg);
+    color:var(--body-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--menu-bg);
+    margin-left: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--menu-border);
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.menu button,
+.menu a {
+    padding: 10px 20px;
+    color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-bg);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 1;
+    font-size: 1rem;
+}
+
+/* LINHA CONTEĆDO */
+.linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--linha-bg);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--coluna-bg);
+}
+
+/* COLUNA CONTEĆDO */
+.coluna {
+    flex: 1;
+    padding: 20px;
+    border-style: none;
+    border-width: 0px;
+    border-radius: 5px;
+    background-color: var(--coluna-bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.coluna h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coluna li {
+    margin-bottom: 5px;
+}
+/* Marcadores, Links e BotĆµes */
+a{
+    color:var(--link-color);
+}
+
+a:hover,
+button:hover{
+    color:var(--link-color-hover);
+}
+
+.specialStrong {
+    color: green;
+}
